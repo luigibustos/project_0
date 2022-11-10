@@ -9,8 +9,6 @@
 // Sleep = - 5
 // Play = - 3
 
-
-
 // HTML Elements
 
 // Name Buttons
@@ -31,4 +29,17 @@ const hungerStat = document.querySelector('#hunger-stat')
 const sleepinesStat = document.querySelector('#sleepiness-stat')
 const bordStat = document.querySelector('#bord-stat')
 
+// Set / Reset Name Function
+function setTamName(){
+    if(nameInput.value !== ''){
+        nameStat.textContent = nameInput.value
+        nameInput.value = ''
+    }
+}
 
+function resetTamName() {
+    nameStat.textContent = 'Blob'
+}
+
+resetName.addEventListener('click', resetTamName)
+setName.addEventListener('click', setTamName)
