@@ -55,25 +55,60 @@ let boredLevel = parseInt(boredStat.textContent)
 setInterval(()=> {
     if(hungerLevel < 10) {
         hungerLevel++
-        hungerLevel.toString()
+        healthLevel -= 4
+        healthStat.textContent = healthLevel
         hungerStat.textContent = hungerLevel
     } 
-}, 2000)
+}, 30000)
 
 setInterval(()=> {
     if(sleepLevel < 10) {
         sleepLevel ++
-        sleepLevel.toString()
+        healthLevel -= 3
+        healthStat.textContent = healthLevel
         sleepinesStat.textContent = sleepLevel
     }
-}, 2000)
+}, 40000)
 
 setInterval(() => {
     if(boredLevel < 10) {
         boredLevel ++
-        boredLevel.toString()
+        healthLevel -= 3
+        healthStat.textContent = healthLevel
         boredStat.textContent = boredLevel
     }
-}, 2000)
+}, 50000)
 
+// Button Functions to Reduce Hunger, Sleepiness, Bored Levels 
+function feedTam() {
+    if (boredLevel !== 0 && healthLevel !== 100 || healthLevel !== 0) {
+        hungerLevel --
+        healthLevel += 4
+        healthStat.textContent = healthLevel
+        hungerStat.textContent = hungerLevel
+    }
+}
+
+
+function knockOutTam() {
+    if (boredLevel !== 0 && healthLevel !== 100 || healthLevel !== 0) {
+        sleepLevel --
+        healthLevel += 3
+        healthStat.textContent = healthLevel
+        sleepinesStat.textContent = sleepLevel
+    }
+}
+
+function playWithTam() {
+    if (boredLevel !== 0 && healthLevel !== 100 || healthLevel !== 0) {
+        boredLevel -- 
+        healthLevel += 3
+        healthStat.textContent = healthLevel
+        boredStat.textContent = boredLevel
+    }
+}
+
+feedBtn.addEventListener('click', feedTam)
+sleepBtn.addEventListener('click', knockOutTam)
+playBtn.addEventListener('click', playWithTam)
 
