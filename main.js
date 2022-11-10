@@ -27,7 +27,7 @@ const nameStat = document.querySelector('#name-stat')
 const ageStat = document.querySelector('#age-stat')
 const hungerStat = document.querySelector('#hunger-stat')
 const sleepinesStat = document.querySelector('#sleepiness-stat')
-const bordStat = document.querySelector('#bord-stat')
+const boredStat = document.querySelector('#bored-stat')
 
 // Set / Reset Name Function
 function setTamName(){
@@ -43,3 +43,37 @@ function resetTamName() {
 
 resetName.addEventListener('click', resetTamName)
 setName.addEventListener('click', setTamName)
+
+// Convert Stats from String to Number
+let healthLevel = parseInt(healthStat.textContent)
+let hungerLevel = parseInt(hungerStat.textContent)
+let sleepLevel = parseInt(sleepinesStat.textContent)
+let boredLevel = parseInt(boredStat.textContent)
+
+// Hunger, Sleepy, Bored Intervals
+
+setInterval(()=> {
+    if(hungerLevel < 10) {
+        hungerLevel++
+        hungerLevel.toString()
+        hungerStat.textContent = hungerLevel
+    } 
+}, 2000)
+
+setInterval(()=> {
+    if(sleepLevel < 10) {
+        sleepLevel ++
+        sleepLevel.toString()
+        sleepinesStat.textContent = sleepLevel
+    }
+}, 2000)
+
+setInterval(() => {
+    if(boredLevel < 10) {
+        boredLevel ++
+        boredLevel.toString()
+        boredStat.textContent = boredLevel
+    }
+}, 2000)
+
+
