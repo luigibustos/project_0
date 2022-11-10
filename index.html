@@ -9,19 +9,31 @@
   </head>
   <body>
     <nav>
-      <ul>
-        <li>Input Placeholder</li>
-        <li>Home</li>
-        <li>User Placeholder</li>
-      </ul>
+      <div>
+        <input />
+        <button>Set Name</button>
+        <button>Reset Name</button>
+      </div>
+      <h1>Tamagotchi Game</h1>
     </nav>
-    <h1>Tamagotchi Game</h1>
-    <section id="tam-section">
+    <section id="tam-sec">
       <div id="tam-window">
-        <div id="tamagotchi"></div>
-        <button id="feed">Feed</button>
-        <button id="sleep">Sleep</button>
-        <button id="play">Play</button>
+        <div class="game" id="tam-game">
+          <div class="game" id="tam-screen">
+            <h3>Health</h3>
+            <h3>Name</h3>
+            <h3>Age</h3>
+            <div id="blob">Blob</div>
+            <h3>Hunger</h3>
+            <h3>Sleepiness</h3>
+            <h3>Boredom</h3>
+          </div>
+        </div>
+        <div class="game-control">
+          <button class="game-btn" id="feed">Feed</button>
+          <button class="game-btn" id="sleep">Sleep</button>
+          <button class="game-btn" id="play">Play</button>
+        </div>
       </div>
     </section>
     <section>Game Setting Sec Place Holder</section>
