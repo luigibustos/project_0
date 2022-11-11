@@ -60,7 +60,7 @@ setInterval(()=> {
         healthStat.textContent = healthLevel
         hungerStat.textContent = hungerLevel
     } 
-}, 3000)
+}, 30000)
 
 setInterval(()=> {
     if(sleepLevel < 10) {
@@ -69,7 +69,7 @@ setInterval(()=> {
         healthStat.textContent = healthLevel
         sleepinesStat.textContent = sleepLevel
     }
-}, 4000)
+}, 40000)
 
 setInterval(() => {
     if(boredLevel < 10) {
@@ -78,7 +78,7 @@ setInterval(() => {
         healthStat.textContent = healthLevel
         boredStat.textContent = boredLevel
     }
-}, 5000)
+}, 50000)
 
 // Button Functions to Reduce Hunger, Sleepiness, Bored Levels 
 function feedTam() {
@@ -118,16 +118,16 @@ playBtn.addEventListener('click', playWithTam)
 let ageCounter = 0
 const ageTimer = setInterval(() => {
     ageCounter ++
-    if(ageCounter < 10) {
+    if(ageCounter < 100) {
         console.log(ageCounter)
-    } else if ( ageCounter >= 11 && ageCounter <= 20) {
+    } else if ( ageCounter >= 110 && ageCounter <= 200) {
         console.log(ageCounter)
         ageStat.textContent = '2'
-    } else if (ageCounter > 20) {
+    } else if (ageCounter > 200) {
         console.log(ageCounter)
         ageStat.textContent = '3'
     } 
-    if (ageCounter === 30) {
+    if (ageCounter === 300) {
         clearInterval(ageTimer)
         console.log('Stop ageTimer Interval')
     }
