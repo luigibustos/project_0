@@ -38,7 +38,7 @@ function setTamName(){
 }
 
 function resetTamName() {
-    nameStat.textContent = 'Blob'
+    nameStat.textContent = 'Bob the Blob'
 }
 
 resetName.addEventListener('click', resetTamName)
@@ -49,6 +49,7 @@ let healthLevel = parseInt(healthStat.textContent)
 let hungerLevel = parseInt(hungerStat.textContent)
 let sleepLevel = parseInt(sleepinesStat.textContent)
 let boredLevel = parseInt(boredStat.textContent)
+let ageLevel = parseInt(ageStat.textContent)
 
 // Hunger, Sleepy, Bored Intervals
 
@@ -59,7 +60,7 @@ setInterval(()=> {
         healthStat.textContent = healthLevel
         hungerStat.textContent = hungerLevel
     } 
-}, 30000)
+}, 3000)
 
 setInterval(()=> {
     if(sleepLevel < 10) {
@@ -68,7 +69,7 @@ setInterval(()=> {
         healthStat.textContent = healthLevel
         sleepinesStat.textContent = sleepLevel
     }
-}, 40000)
+}, 4000)
 
 setInterval(() => {
     if(boredLevel < 10) {
@@ -77,11 +78,11 @@ setInterval(() => {
         healthStat.textContent = healthLevel
         boredStat.textContent = boredLevel
     }
-}, 50000)
+}, 5000)
 
 // Button Functions to Reduce Hunger, Sleepiness, Bored Levels 
 function feedTam() {
-    if (boredLevel !== 0 && healthLevel !== 100 || healthLevel !== 0) {
+    if (hungerLevel > 0 && healthLevel < 100) {
         hungerLevel --
         healthLevel += 4
         healthStat.textContent = healthLevel
@@ -89,9 +90,8 @@ function feedTam() {
     }
 }
 
-
 function knockOutTam() {
-    if (boredLevel !== 0 && healthLevel !== 100 || healthLevel !== 0) {
+    if (sleepLevel > 0 && healthLevel < 100) {
         sleepLevel --
         healthLevel += 3
         healthStat.textContent = healthLevel
@@ -100,7 +100,7 @@ function knockOutTam() {
 }
 
 function playWithTam() {
-    if (boredLevel !== 0 && healthLevel !== 100 || healthLevel !== 0) {
+    if (boredLevel > 0 && healthLevel < 100) {
         boredLevel -- 
         healthLevel += 3
         healthStat.textContent = healthLevel
@@ -111,4 +111,27 @@ function playWithTam() {
 feedBtn.addEventListener('click', feedTam)
 sleepBtn.addEventListener('click', knockOutTam)
 playBtn.addEventListener('click', playWithTam)
+
+// Age Interval Increase
+
+let ageCounter = 0
+const ageTimer = setInterval(() => {
+    ageCounter ++
+    if(ageCounter < 10) {
+        console.log(ageCounter)
+    } else if ( ageCounter >= 11 && ageCounter <= 20) {
+        console.log(ageCounter)
+        ageStat.textContent = '2'
+    } else if (ageCounter > 20) {
+        console.log(ageCounter)
+        ageStat.textContent = '3'
+    } 
+    if (ageCounter === 30) {
+        clearInterval(ageTimer)
+        console.log('Stop ageTimer Interval')
+    }
+}, 1000)
+
+
+
 
