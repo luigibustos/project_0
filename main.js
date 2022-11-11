@@ -85,6 +85,7 @@ function feedTam() {
     if (hungerLevel > 0 && healthLevel < 100) {
         hungerLevel --
         healthLevel += 4
+        ageCounter += 1
         healthStat.textContent = healthLevel
         hungerStat.textContent = hungerLevel
     }
@@ -131,7 +132,3 @@ const ageTimer = setInterval(() => {
         console.log('Stop ageTimer Interval')
     }
 }, 1000)
-
-
-
-

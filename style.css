@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 *{
     margin: 0 auto;
     padding: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 nav {
     display: flex;
@@ -16,7 +19,7 @@ nav {
 #tam-sec {
     width: 90vw;
     height: 80vw;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 
     display: flex;
     align-content: center;
@@ -24,12 +27,13 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+
 }
 
 #tam-window {
     border: 2px solid red;
-    height: 600px;
-    width: 600px;
+    height: 650px;
+    width: 650px;
 
     display: flex;
     flex-direction: column;
@@ -41,14 +45,14 @@ nav {
 
 #tam-game {
     border: 2px solid blue;
-    height: 400px;
-    width: 400px;
+    height: 450px;
+    width: 450px;
 }
 
 .game-control {
     border: 2px solid green;
     height: 50px;
-    width: 400px;
+    width: 450px;
     margin: 10px;
 
     display: flex;
@@ -63,8 +67,28 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
+    align-items: center;
 }
 
 #blob {
     grid-column: span 3;
+    /* border: 2px solid orange;s */
+    width: 100%;
+    height: 100%;
+
+    background-image:url('./assets/plumber-svgrepo-com.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.game-stat {
+    font-size: 0.625em;
+    /* border: 2px solid black; */
+}
+
+.game-btn {
+    font-size: 0.688em;
+    padding: 7px;
+    border-radius: 12px;
 }
