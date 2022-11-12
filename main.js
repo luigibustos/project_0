@@ -20,6 +20,8 @@ const resetName = document.querySelector('#reset-name')
 const feedBtn = document.querySelector('#feed')
 const sleepBtn = document.querySelector('#sleep')
 const playBtn = document.querySelector('#play')
+const fwdCharSelcBtn = document.querySelector('#fwd')
+const backCharSelcBtn = document.querySelector('#back')
 
 // Game Character Indicators
 const healthStat = document.querySelector('#health-stat')
@@ -28,6 +30,7 @@ const ageStat = document.querySelector('#age-stat')
 const hungerStat = document.querySelector('#hunger-stat')
 const sleepinesStat = document.querySelector('#sleepiness-stat')
 const boredStat = document.querySelector('#bored-stat')
+const character = document.querySelector('#blob')
 
 // Set / Reset Name Function
 function setTamName(){
@@ -132,3 +135,32 @@ const ageTimer = setInterval(() => {
         console.log('Stop ageTimer Interval')
     }
 }, 1000)
+
+// Character Select 
+
+const characters = ['./assets/DinoSprites_vita.gif', './assets/DinoSprites_doux.gif', './assets/DinoSprites_mort.gif', './assets/DinoSprites_tard.gif'];
+
+let charSelector = 0;
+
+function fwdCharSelc () {
+    if(charSelector < 3) {
+        charSelector ++ 
+        character.style.backgroundImage = `url(${characters[charSelector].toString()})`
+    } else {
+        charSelector = 0
+        character.style.backgroundImage = `url(${characters[0].toString()})`
+    }
+}
+
+// function backCharSelc() {
+//     if(charSelector === 3 ) {
+//         charSelector = 0
+//         character.style.backgroundImage = `url(${characters[charSelector].toString()})`
+//     } else {
+//         charSelector --
+//         character.style.backgroundImage = `url(${characters[charSelector].toString()})`
+//     }
+// }
+
+fwdCharSelcBtn.addEventListener('click', fwdCharSelc)
+// backCharSelcBtn.addEventListener('click', backCharSelc)
