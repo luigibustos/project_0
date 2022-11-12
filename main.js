@@ -38,7 +38,7 @@ function setTamName(){
 }
 
 function resetTamName() {
-    nameStat.textContent = 'Bob the Blob'
+    nameStat.textContent = 'REX'
 }
 
 resetName.addEventListener('click', resetTamName)

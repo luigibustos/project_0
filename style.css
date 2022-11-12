@@ -16,11 +16,16 @@ nav {
     width: 100vw;
 }
 
+
+
+input {
+    height: 28px;
+}
+
+
 #tam-sec {
     width: 90vw;
     height: 80vw;
-    /* border: 2px solid black; */
-
     display: flex;
     align-content: center;
     justify-content: center;
@@ -31,10 +36,10 @@ nav {
 }
 
 #tam-window {
-    border: 2px solid red;
     background-color: rgba(193, 190, 185, .7);
+    box-shadow: 5px 6px darkgrey;
     border-radius: 18px 18px 80px 18px ;
-    height: 1000px;
+    height: 800px;
     width: 650px;
 
     display: flex;
@@ -46,9 +51,12 @@ nav {
 }
 
 #tam-game {
-    border: 2px solid #2F3130;
+    border: 3px solid #2F3130;
+    border-radius: 12px;
+    background-color: #8B868C;
     height: 450px;
     width: 450px;
+    z-index: 1;
 }
 
 .game-control {
@@ -74,8 +82,17 @@ nav {
 
 .tam-screen-btm {
     width: 450px;
-    height: 350px;
+    height: 150px;
     border: 2px solid orange;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr .5fr;
+    align-items: center;
+}
+
+.play-pause-btns {
+    grid-area: 1 / 2 / 2 / 2;
 }
 
 #blob {
@@ -84,19 +101,20 @@ nav {
     width: 100%;
     height: 100%;
 
-    background-image:url('./assets/plumber-svgrepo-com.svg');
+    background-image:url('./assets/DinoSprites_vita.gif');
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
+    border-top: 2px solid #2F3130;
+    border-bottom: 2px solid #2F3130;
 
-    background-color: rgba(139, 158, 91, .5);
-    background-color:;
+    background-color: rgba(139, 158, 91, .7);
 }
 
 .game-stat {
     font-size: 0.725em;
     text-shadow: 1px 1px lightgrey;
-    background-color: #8B868C;
+    /* background-color: #8B868C; */
     color: white;
     height: 100%;
     width: 100%;
@@ -107,12 +125,12 @@ nav {
     align-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    border-radius: 12px;
     /* border: 2px solid black; */
 }
 
 .game-btn {
     font-size: 0.688em;
-   
 }
 
 button {
