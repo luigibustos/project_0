@@ -32,7 +32,9 @@ nav {
 
 #tam-window {
     border: 2px solid red;
-    height: 650px;
+    background-color: rgba(193, 190, 185, .7);
+    border-radius: 18px 18px 80px 18px ;
+    height: 1000px;
     width: 650px;
 
     display: flex;
@@ -44,7 +46,7 @@ nav {
 }
 
 #tam-game {
-    border: 2px solid blue;
+    border: 2px solid #2F3130;
     height: 450px;
     width: 450px;
 }
@@ -70,6 +72,12 @@ nav {
     align-items: center;
 }
 
+.tam-screen-btm {
+    width: 450px;
+    height: 350px;
+    border: 2px solid orange;
+}
+
 #blob {
     grid-column: span 3;
     /* border: 2px solid orange;s */
@@ -80,15 +88,46 @@ nav {
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
+
+    background-color: rgba(139, 158, 91, .5);
+    background-color:;
 }
 
 .game-stat {
-    font-size: 0.625em;
+    font-size: 0.725em;
+    text-shadow: 1px 1px lightgrey;
+    background-color: #8B868C;
+    color: white;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     /* border: 2px solid black; */
 }
 
 .game-btn {
     font-size: 0.688em;
+   
+}
+
+button {
+    color: rgb(47, 49, 48);
     padding: 7px;
     border-radius: 12px;
+    background-color: rgba(193, 190, 185, .5);
+    
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(193, 190, 185, 1);
+}
+
+span {
+    padding-top: 6px;
 }
