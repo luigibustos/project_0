@@ -118,49 +118,58 @@ playBtn.addEventListener('click', playWithTam)
 
 // Age Interval Increase
 
-let ageCounter = 0
-const ageTimer = setInterval(() => {
-    ageCounter ++
-    if(ageCounter < 100) {
-        console.log(ageCounter)
-    } else if ( ageCounter >= 110 && ageCounter <= 200) {
-        console.log(ageCounter)
-        ageStat.textContent = '2'
-    } else if (ageCounter > 200) {
-        console.log(ageCounter)
-        ageStat.textContent = '3'
-    } 
-    if (ageCounter === 300) {
-        clearInterval(ageTimer)
-        console.log('Stop ageTimer Interval')
-    }
-}, 1000)
+// let ageCounter = 0
+// const ageTimer = setInterval(() => {
+//     ageCounter ++
+//     if(ageCounter < 100) {
+//         console.log(ageCounter)
+//     } else if ( ageCounter >= 110 && ageCounter <= 200) {
+//         console.log(ageCounter)
+//         ageStat.textContent = '2'
+//     } else if (ageCounter > 200) {
+//         console.log(ageCounter)
+//         ageStat.textContent = '3'
+//     } 
+//     if (ageCounter === 300) {
+//         clearInterval(ageTimer)
+//         console.log('Stop ageTimer Interval')
+//     }
+// }, 1000)
 
 // Character Select 
 
-const characters = ['./assets/DinoSprites_vita.gif', './assets/DinoSprites_doux.gif', './assets/DinoSprites_mort.gif', './assets/DinoSprites_tard.gif'];
+const characters = ['./assets/DinoSprites_vita.gif',
+    './assets/DinoSprites_doux.gif',
+    './assets/DinoSprites_mort.gif',
+    './assets/DinoSprites_tard.gif'
+];
 
 let charSelector = 0;
 
 function fwdCharSelc () {
     if(charSelector < 3) {
         charSelector ++ 
-        character.style.backgroundImage = `url(${characters[charSelector].toString()})`
-    } else {
+        console.log(`Char Selc is ${charSelector}`)
+        character.style.backgroundImage = `url(${characters[charSelector]})`
+    } 
+    else {
         charSelector = 0
-        character.style.backgroundImage = `url(${characters[0].toString()})`
+        console.log(`Char Selc is ${charSelector}`)
+        character.style.backgroundImage = `url(${characters[0]})`
     }
 }
 
-// function backCharSelc() {
-//     if(charSelector === 3 ) {
-//         charSelector = 0
-//         character.style.backgroundImage = `url(${characters[charSelector].toString()})`
-//     } else {
-//         charSelector --
-//         character.style.backgroundImage = `url(${characters[charSelector].toString()})`
-//     }
-// }
+function backCharSelc() {
+    if(charSelector > 0) {  
+        charSelector --
+        console.log(`Char Selc is ${charSelector}`)
+        character.style.backgroundImage = `url(${characters[charSelector]})`
+    } else {
+        charSelector = 3
+        console.log(`Char Selc is ${charSelector}`)
+        character.style.backgroundImage = `url(${characters[charSelector]})`
+    }
+}
 
 fwdCharSelcBtn.addEventListener('click', fwdCharSelc)
-// backCharSelcBtn.addEventListener('click', backCharSelc)
+backCharSelcBtn.addEventListener('click', backCharSelc)
