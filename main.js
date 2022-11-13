@@ -41,7 +41,10 @@ function setTamName(){
 }
 
 function resetTamName() {
-    nameStat.textContent = 'REX'
+    // nameStat.textContent = 'REX'
+    const defaultNames = ['Chance the Rapptor', 'Lizza', 'Dr. Tre', 'Lil T Rex', 'Yoshi', 'Pterry Crews', 'Dino', "Dorthy the Dinoasur"]
+    let randomName = Math.floor(Math.random() * defaultNames.length)
+    nameStat.textContent = defaultNames[randomName]
 }
 
 resetName.addEventListener('click', resetTamName)
@@ -118,23 +121,23 @@ playBtn.addEventListener('click', playWithTam)
 
 // Age Interval Increase
 
-// let ageCounter = 0
-// const ageTimer = setInterval(() => {
-//     ageCounter ++
-//     if(ageCounter < 100) {
-//         console.log(ageCounter)
-//     } else if ( ageCounter >= 110 && ageCounter <= 200) {
-//         console.log(ageCounter)
-//         ageStat.textContent = '2'
-//     } else if (ageCounter > 200) {
-//         console.log(ageCounter)
-//         ageStat.textContent = '3'
-//     } 
-//     if (ageCounter === 300) {
-//         clearInterval(ageTimer)
-//         console.log('Stop ageTimer Interval')
-//     }
-// }, 1000)
+let ageCounter = 0
+const ageTimer = setInterval(() => {
+    ageCounter ++
+    if(ageCounter < 100) {
+        console.log(ageCounter)
+    } else if ( ageCounter >= 110 && ageCounter <= 200) {
+        console.log(ageCounter)
+        ageStat.textContent = '2'
+    } else if (ageCounter > 200) {
+        console.log(ageCounter)
+        ageStat.textContent = '3'
+    } 
+    if (ageCounter === 300) {
+        clearInterval(ageTimer)
+        console.log('Stop ageTimer Interval')
+    }
+}, 1000)
 
 // Character Select 
 

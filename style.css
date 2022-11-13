@@ -16,8 +16,6 @@ nav {
     width: 100vw;
 }
 
-
-
 input {
     height: 28px;
 }
@@ -94,6 +92,9 @@ input {
 .play-pause-btns {
     grid-area: 1 / 2 / 2 / 2;
 }
+#name-stat {
+    text-align: center;
+}
 
 #blob {
     grid-column: span 3;
@@ -149,3 +150,4 @@ button:hover {
 span {
     padding-top: 6px;
 }
+
