@@ -31,6 +31,8 @@ const hungerStat = document.querySelector('#hunger-stat')
 const sleepinesStat = document.querySelector('#sleepiness-stat')
 const boredStat = document.querySelector('#bored-stat')
 const character = document.querySelector('#blob')
+const onLight = document.querySelector('#on-light')
+const offLight = document.querySelector('#off-light')
 
 // Set / Reset Name Function
 function setTamName(){
@@ -41,8 +43,7 @@ function setTamName(){
 }
 
 function resetTamName() {
-    // nameStat.textContent = 'REX'
-    const defaultNames = ['Chance the Rapptor', 'Lizza', 'Dr. Tre', 'Lil T Rex', 'Yoshi', 'Pterry Crews', 'Dino', "Dorthy the Dinoasur"]
+    const defaultNames = ['Chance the Rapptor', 'Lizza', 'Dr. Tre', 'Lil T Rex', 'Pterry Crews']
     let randomName = Math.floor(Math.random() * defaultNames.length)
     nameStat.textContent = defaultNames[randomName]
 }
@@ -66,7 +67,7 @@ setInterval(()=> {
         healthStat.textContent = healthLevel
         hungerStat.textContent = hungerLevel
     } 
-}, 30000)
+}, 3000)
 
 setInterval(()=> {
     if(sleepLevel < 10) {
@@ -75,7 +76,7 @@ setInterval(()=> {
         healthStat.textContent = healthLevel
         sleepinesStat.textContent = sleepLevel
     }
-}, 40000)
+}, 4000)
 
 setInterval(() => {
     if(boredLevel < 10) {
@@ -84,7 +85,7 @@ setInterval(() => {
         healthStat.textContent = healthLevel
         boredStat.textContent = boredLevel
     }
-}, 50000)
+}, 5000)
 
 // Button Functions to Reduce Hunger, Sleepiness, Bored Levels 
 function feedTam() {
@@ -176,3 +177,8 @@ function backCharSelc() {
 
 fwdCharSelcBtn.addEventListener('click', fwdCharSelc)
 backCharSelcBtn.addEventListener('click', backCharSelc)
+
+// character.style.filter = 'grayscale(1)'
+// character.style.backgroundImage = 'none'
+// onLight.style.backgroundColor = 'darkgrey'
+// offLight.style.backgroundColor = 'salmon'
