@@ -5,6 +5,7 @@
     padding: 0;
     font-family: 'Press Start 2P', cursive;
 }
+
 nav {
     display: flex;
     align-content: center;
@@ -20,6 +21,9 @@ input {
     height: 28px;
 }
 
+h1 {
+    color: rgba(134, 38, 89, .7)
+}
 #tam-sec {
     width: 80vw;
     height: 80vw;
@@ -108,7 +112,6 @@ input {
 .tam-screen-btm {
     width: 450px;
     height: 80px;
-    /* border: 2px solid orange; */
     
     display: flex;
     flex-direction: column;
@@ -135,7 +138,6 @@ input {
     border-bottom: 2px solid #2F3130;
 
     background-color: rgba(139, 158, 91, .7);
-    /* filter: grayscale(90%); */
 }
 
 .game-stat {
