@@ -67,7 +67,7 @@ h1 {
 #off-light {
     position: relative;
     display: block;
-    background-color: darkgrey;
+    background-color: salmon;
     border: 2px solid rgba(193, 190, 185, .9);
     border-radius: 0 12px 12px 0;
     height: 20px;
